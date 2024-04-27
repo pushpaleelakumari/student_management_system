@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <section class="my-3">
+            <!-- Search component -->
+            <div class="row align-items-center px-1 justify-content-center mb-1">
+                <div class=" col-md-10">
+                    <input type="text" name="search" id="search" placeholder="Search" class="form-control rounded-0">
+                </div>
+                <div class="col-md-1">
+                    <button class="btn btn-dark rounded-0" id="searchButton">Search</button>
+                </div>
+            </div>
+
+            <!-- SORTING CONTENT -->
+
+            <div class="d-lg-flex gap-4 mt-3 justify-content-center align-items-center">
+                <div>
+                    <button id="sort_a-z" class="btn btn-dark rounded-0 px-5 m-1">Sort A->Z</button>
+                </div>
+                <div>
+                    <button id="sort_z-a" class="btn btn-dark rounded-0 px-5 m-1">Sort Z->A</button>
+                </div>
+                <div>
+                    <button id="marks_sort" class="btn btn-dark rounded-0 px-5 m-1">Sort By Marks</button>
+                </div>
+                <div>
+                    <button id="passing_sort" class="btn btn-dark rounded-0 px-5 m-1">Sort By Passing</button>
+                </div>
+                <div>
+                    <button id="class_sort" class="btn btn-dark rounded-0 px-5 m-1">Sort By Class</button>
+                </div>
+                <div>
+                    <button id="gender_sort" class="btn btn-dark rounded-0 px-4 m-1">Sort By Gender</button>
+                </div>
+            </div>
+
+            <!-- TABLE CONTENT -->
+            <div class="my-4 mx-5">
+                <table class="table table-bordered table-responsive table-nowrap table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th class="text-center">ID</th>
+                            <th>Name</th>
+                            <th class="text-center">Gender</th>
+                            <th class="text-center">Class</th>
+                            <th class="text-center">Marks</th>
+                            <th class="text-center">Passing</th>
+                            <th class="text-center">Email</th>
+                        </tr>
+                        <tbody id="table-body">
+                        </tbody>
+                    </thead>
+                </table>
+                <div id="error" class="text-center text-danger d-none my-3">Items not found</div>
+            </div>
+        </section>
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>
