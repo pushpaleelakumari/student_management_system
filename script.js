@@ -97,7 +97,7 @@ function handleSortMarks() {
     filteredData = JSON.parse(JSON.stringify(currentItems))
     if (marks_sort.className.includes("btn-dark")) {
         marks_sort.className = "btn btn-success rounded-0 px-5 m-1"
-        filteredData = filteredData.sort((a, b) => b.marks - a.marks)
+        filteredData = filteredData.sort((a, b) => a.marks - b.marks)
         handleFillTable(filteredData)
     } else {
         filteredData = []
@@ -116,10 +116,8 @@ function handleSortByPassing() {
     filteredData = JSON.parse(JSON.stringify(currentItems))
     if (passing_sort.className.includes("btn-dark")) {
         passing_sort.className = "btn btn-success rounded-0 px-5 m-1"
-        filteredData = filteredData.sort((a, b) => {
-            const statusA = a.passing ? 1 : 0
-            const statusB = b.passing ? 1 : 0
-            return statusB - statusA
+        filteredData = filteredData.filter((student) => {
+            return student.passing
         })
         handleFillTable(filteredData)
     } else {
