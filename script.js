@@ -168,6 +168,11 @@ function handleSortByGender() {
         filteredData = []
         handleGetTableItems()
     }
+    sortAtoZ.className = "btn btn-dark rounded-0 px-5 m-1"
+    sortZtoA.className = "btn btn-dark rounded-0 px-5 m-1"
+    marks_sort.className = "btn btn-dark rounded-0 px-5 m-1"
+    passing_sort.className = "btn btn-dark rounded-0 px-5 m-1"
+    class_sort.className = "btn btn-dark rounded-0 px-5 m-1"
 }
 
 function handleFillData(data) {
